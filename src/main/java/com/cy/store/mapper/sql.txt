@@ -1,0 +1,20 @@
+limit：
+    select * from table limit stratIndex,n;
+    从0（下标0）开始，表示第一条记录
+    n是指从第stratIndex+1条记录开始，取n条记录。
+
+    select * from table limit 2,4
+    取出第3条至第6条，总共4条记录，即检索记录行 3-6
+
+    LIMIT n 等价于 LIMIT 0,n。
+    只给定一个参数，表示返回的记录行数
+
+    SELECT * FROM table LIMIT 5;
+    检索前 5 个记录行
+
+    检索从指定开始记录到记录集的结束所有的记录行，可以指定第二个参数为 -1
+    LIMIT m，-1
+
+    SELECT * FROM table LIMIT 10,-1;
+    检索记录行 11-last.
+
